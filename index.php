@@ -62,7 +62,7 @@
                 //      restituisce "titolo: sottotitolo" 
                 // Se sottotiolo assente:
                 //      restituisce "titolo"
-                if (empty($subtitle)) {
+                if (!empty($this -> subtitle)) {
                     return $this -> title . " | " . $this -> subtitle;
                 } else {
                     return $this -> title . " | " . "???";                                       
@@ -74,7 +74,7 @@
                 //      restituisce "fullTitle | regista"
                 // Se regista assente:
                 //      restituisce "fullTitle | ???"
-                if (empty($director)) {
+                if (!empty($this -> director)) {
                     return $this -> getFullTitle() . " | " . $this -> director;
                 } else {
                     return $this -> getFullTitle() . " | " . "???";
