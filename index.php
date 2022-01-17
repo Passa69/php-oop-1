@@ -52,8 +52,32 @@
             public $director;
 
             public function __construct($title) {
-                
+
                 $this -> title = $title;
+            }
+
+            public function getFullTitle() {
+                // Se sottotitolo presente:
+                //      restituisce "titolo: sottotitolo" 
+                // Se sottotiolo assente:
+                //      restituisce "titolo"
+                if ($subtitle > 0) {
+                    return $this -> title . " | " . $this -> subtitle;
+                } else {
+                    return $this -> title . " | " . "???";
+                }
+            }
+
+            public function __toString() {
+                // Se regista presente:
+                //      restituisce "fullTitle | regista"
+                // Se regista assente:
+                //      restituisce "fullTitle | ???"
+                if ($director > 0) {
+                    return $this -> getFullTitle() . " | " . $this -> director;
+                } else {
+                    return $this -> getFullTitle() . " | " . "???";
+                }
             }
         }
     ?>
