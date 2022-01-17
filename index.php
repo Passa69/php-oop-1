@@ -50,6 +50,11 @@
             public $title;
             public $subtitle;
             public $director;
+
+            public function __construct($title) {
+                
+                $this -> title = $title;
+            }
         }
     ?>
 </body>
