@@ -7,6 +7,7 @@
     <title>Films</title>
 </head>
 <body>
+
     <?php
         /** CONSEGNA:
          * 
@@ -79,7 +80,20 @@
                     return $this -> getFullTitle() . " | " . "???";
                 }
             }
+
+            $f1 = new Film("Matrix");
+            $f1 = new Film("Fantozzi 2");
+            $f1 = new Film("Peter Pan");
+
+            $f1 -> subtitle = "";
+            $f2 -> subtitle = "il ritorno di fantozzi";
+            $f3 -> subtitle = "il ritorno all'isola che non c'e'";
+
+            $f1 -> director = "";
+            $f2 -> director = "";
+            $f3 -> director = "Robin Budd";
         }
     ?>
+    
 </body>
 </html>
