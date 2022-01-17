@@ -62,7 +62,7 @@
                 //      restituisce "titolo: sottotitolo" 
                 // Se sottotiolo assente:
                 //      restituisce "titolo"
-                if (empty($subtitle)) {
+                if (!empty($subtitle)) {
                     return $this -> title . " | " . "???";
                 } else {
                     return $this -> title . " | " . $this -> subtitle;                   
@@ -74,7 +74,7 @@
                 //      restituisce "fullTitle | regista"
                 // Se regista assente:
                 //      restituisce "fullTitle | ???"
-                if (empty($director)) {
+                if (!empty($director)) {
                     return $this -> getFullTitle() . " | " . "???";
                 } else {
                     return $this -> getFullTitle() . " | " . $this -> director;
@@ -83,8 +83,8 @@
         }
 
         $f1 = new Film("Matrix");
-        $f1 = new Film("Fantozzi 2");
-        $f1 = new Film("Peter Pan");
+        $f2 = new Film("Fantozzi 2");
+        $f3 = new Film("Peter Pan");
 
         $f1 -> subtitle = "";
         $f2 -> subtitle = "il ritorno di fantozzi";
