@@ -62,10 +62,10 @@
                 //      restituisce "titolo: sottotitolo" 
                 // Se sottotiolo assente:
                 //      restituisce "titolo"
-                if ($subtitle > 0) {
-                    return $this -> title . " | " . $this -> subtitle;
-                } else {
+                if (empty($subtitle)) {
                     return $this -> title . " | " . "???";
+                } else {
+                    return $this -> title . " | " . $this -> subtitle;                   
                 }
             }
 
@@ -74,10 +74,10 @@
                 //      restituisce "fullTitle | regista"
                 // Se regista assente:
                 //      restituisce "fullTitle | ???"
-                if ($director > 0) {
-                    return $this -> getFullTitle() . " | " . $this -> director;
-                } else {
+                if (empty($director)) {
                     return $this -> getFullTitle() . " | " . "???";
+                } else {
+                    return $this -> getFullTitle() . " | " . $this -> director;
                 }
             }
         }
@@ -93,6 +93,10 @@
         $f1 -> director = "";
         $f2 -> director = "";
         $f3 -> director = "Robin Budd";
+
+        echo $f1 . "<br>";
+        echo $f2 . "<br>";
+        echo $f3 . "<br>";
     ?>
 
 </body>
