@@ -44,6 +44,13 @@
          *      Fantozzi 2: il ritorno di fantozzi | ???
          *      Peter Pan: il ritorno all'isola che non c'e' | Robin Budd
          */
+
+        class Film {
+
+            public $title;
+            public $subtitle;
+            public $director;
+        }
     ?>
 </body>
 </html>
